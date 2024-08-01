@@ -1,0 +1,36 @@
+[
+  {
+    "conditions": {
+      "all": [
+        {
+          "fact": "similarity",
+          "operator": "greaterThanInclusive",
+          "value": 80
+        }
+      ]
+    },
+    "event": {
+      "type": "highSimilarity",
+      "params": {
+        "message": "The texts are highly similar."
+      }
+    }
+  },
+  {
+    "conditions": {
+      "all": [
+        {
+          "fact": "similarity",
+          "operator": "lessThan",
+          "value": 80
+        }
+      ]
+    },
+    "event": {
+      "type": "lowSimilarity",
+      "params": {
+        "message": "The texts are not very similar."
+      }
+    }
+  }
+]
